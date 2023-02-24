@@ -13,7 +13,9 @@ The **output** is simply the integer 0 if successful, but the program also print
 The three-dimensional particle coordinates are available in the file "positions.xyz".
 
 ## PROGRAM OUTLINE:
-**(1)** *We start at the root of the tree, which corresponds to level 1.
+We split the set of particles into subsets by using a three-dimensional tree. The idea is to avoid unnecessarily many comparisons between particles that are far from each other.
+
+**(1)** *The algortihm starts at the root of the tree, which corresponds to level 1.
 
 *It randomly select a subset of the particles and uses the median x-coordinate of the subset as estimate of the true median
 
@@ -25,7 +27,7 @@ The three-dimensional particle coordinates are available in the file "positions.
 
 Next time we arrive at (2) we use the z-coordinates, then x again, then y, etc...
 
-**(3)** If we arrive at the leaves, i.e. the current level equals the number of tree levels, we simply compare all pairs of points within the given set.
+**(3)** If the algorithms arrives at the leaves, i.e. the current level equals the number of tree levels, it simply compares all pairs of points within the given set.
 
 **Remark 1**: There is a constant value of the minimal subset size. If a node in the tree has a set of fewer particles 
 than this minimal size, it starts comparing the pairs of particles, regardless of its level in the tree.
