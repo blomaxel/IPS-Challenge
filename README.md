@@ -32,7 +32,7 @@ Next time we arrive at (2) we use the z-coordinates, then x again, then y, etc..
 **Remark 1**: There is a constant value of the minimal subset size. If a node in the tree has a set of fewer particles 
 than this minimal size, it starts comparing the pairs of particles, regardless of its level in the tree.
 
-**Remark 2**: When the file "positions.xyz" is parsed, the program maps the decimal numbers (float or double float) to long unsigned integers. I just realised that this is unnecessary as a regular float generally has no larger size than a long int, so I will reverse this whenever I have time.
+**Remark 2**: When the file "positions.xyz" is parsed, the program maps the decimal numbers (double float) to long unsigned integers. I just realised that this is unnecessary as single floats have enoguh precision and generally have no larger size than long ints, so I will reverse this soon. The program will then simply read the coordinates as floats.
 
 **Remark 3**: When splitting the set of particles into 2^(treelevels-1) subsets, there are neighbouring points close to the borders that are separated. This is accounted for in the program and they are all compared exactly once.
 
