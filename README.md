@@ -1,4 +1,4 @@
-# IPS-Challenge
+# IPS Challenge
 
 This is my attempt to count the number of particle pairs within a distance of <=0.05 (meters) from each other.
 
