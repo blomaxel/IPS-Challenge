@@ -35,7 +35,7 @@ than this minimal size, it starts comparing the pairs of particles, regardless o
 **Remark 3**: When splitting the set of particles into 2^(treelevels-1) subsets, there are neighbouring points close to the borders that are separated. This is accounted for in the program and they are all compared exactly once.
 
 
-##Functionality and further improvements.
+## Functionality and further improvements.
 
 The program works especially well for particles that are not uniformly distributed, and it utilises parallel processing. It should in principle work well even for much larger sets than the one in the test file "positions.xyz".
 It could be further improved by explicitly taking the hardware conditions into account. 
